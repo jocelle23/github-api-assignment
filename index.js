@@ -5,6 +5,7 @@ function displayResults(responseJson) {
     console.log(responseJson);
     $('#user-repos-list').empty();
 
+    $('#results').append(`<h2>${responseJson.length} Search Results</h2>`);
     // iterate through the articles array, stopping at the max number of results
     for (let i = 0; i < responseJson.length; i++) {
         $('#user-repos-list').append(`
